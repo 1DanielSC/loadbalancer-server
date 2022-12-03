@@ -19,4 +19,14 @@ public class LbController {
     public ResponseEntity<?> testProduct(){
         return restTemplate.getForEntity("http://PRODUCT/product/sayHi", String.class);
     }
+
+    @GetMapping(value = "/sayHi2")
+    public ResponseEntity<?> testReview(){
+        return restTemplate.getForEntity("http://REVIEW/review/sayHi", String.class);
+    }
+
+    @GetMapping(value = "/sayHi3")
+    public ResponseEntity<?> testSales(){
+        return restTemplate.getForEntity("http://SALES/order/sayHi", String.class);
+    }
 }
